@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,address=no"> 
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= webpackConfig.name %></title>
+    <script>document.write('<script src="./config.js?t=' + new Date().getTime() + '"><\/script>');</script> 
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but ynhy-web doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+  <script>
+    var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+    var isIE = userAgent.indexOf("compatible") > -1
+            && userAgent.indexOf("MSIE") > -1; //判断是否IE浏览器
+    if(isIE){
+      location.href='/download.html'
+    }
+  </script>
+</html>

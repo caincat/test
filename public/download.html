@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>下载</title>
+  <style>
+    .download {
+      position: absolute;
+      width: 100%;
+      top: 20%;
+      text-align: center;
+      color:#000;
+      font-size: 14px;
+    }
+    .download a{
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body>
+  <p class="download">本系统推荐使用谷歌浏览器
+    <a href="/chrome/ChromeStandaloneSetup64.exe">64位下载</a>
+    <a href="/chrome/ChromeStandaloneSetup.exe">32位下载</a>
+    <a href="/chrome/49.0.2623.112_chrome_installer.exe">XP专用下载</a>
+  </p>
+</body>
+<script>
+  var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+  var isIE = userAgent.indexOf("compatible") > -1
+          && userAgent.indexOf("MSIE") > -1; //判断是否IE浏览器
+  if(!isIE){
+    location.href='/index.html'
+  }
+</script>
+</html>

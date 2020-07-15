@@ -1,0 +1,120 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  padding-right: 0 !important;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+input[readonly='readonly'] {
+  background-color: #F5F7FA;
+}
+
+textarea[readonly='readonly'] {
+  background-color: #F5F7FA;
+}
+
+.el-select {
+  input[readonly='readonly'] {
+    background-color: #fff;
+  }
+}
+
+.base-upload[readonly='readonly'] {
+  input {
+    background-color: #F5F7FA;
+  }
+}
+
+// main-container global css
+.app-container {
+  margin: 5px;
+  padding: 5px;
+  background: #fff;
+  overflow-x: auto;
+}
+
+.flex-x {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.flex-y {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.float-l {
+  float: left;
+}
+
+.float-r {
+  float: right;
+}
+
+.stress {
+  color: #F56C6C;
+}
+
+//CSS input type="number"出现上下箭头时解决方案
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
